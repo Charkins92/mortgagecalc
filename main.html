@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <title>Mortgage Calculator</title>
-        <link rel="stylesheet" href="main.css">
-    </header>
-    <body>
-        <p>test</p>
-        <input type="number" id="loanAmount" placeholder="Loan Amount">
-        <script src="main.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body class="container">
+    <div class="main-container">
+        <div class="title">
+            <h1>Mortgage Calculator</h1>
+        </div>
+        <form class="inputs">
+            <label for="homePrice">Home Price</label>
+            <input type="text" id="homePrice" name="homePrice" placeholder="$220,000"/>
+            <br/>
+            <label for="loanAmount">Loan Amount</label>
+            <input type="text" id="loanAmount" name="loanAmount" placeholder="$200,000"/>
+            <br/>
+            <label for="downPayment">Down Payment</label>
+            <input type="text" id="downPayment" name="downPayment" placeholder="$20,000"/>
+            <br/>
+            <label for="loanTerm">Loan Term</label>
+            <input type="text" id="loanTerm" name="loanTerm" placeholder="30 Years"/>
+            <br/>
+            <label for="interestRate">Interest Rate</label>
+            <input type="text" id="interestRate" name="interestRate" placeholder="7%"/>
+            <br/>
+            <button type="button" id="button" onclick="calculateMonthlyPayment()">Submit</button>
+            <ul id="result"></ul>
+        </form>
+
+
+    </div>
+    <script src="main.js"></script>
+    <script>document.getElementById("button").addEventListener("click", calculateMonthlyPayment);</script>
+</body>
+
 </html>
